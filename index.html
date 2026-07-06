@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>樱井白暮 | 个人主页</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="content-column">
+        <section class="profile-panel" aria-labelledby="profile-title">
+          <div class="profile-hero">
+            <img class="avatar" src="assets/avatar.png" alt="樱井白暮的头像" />
+            <div>
+              <p class="eyebrow">Nice to meet you</p>
+              <h1 id="profile-title">樱井白暮</h1>
+              <p class="tagline">一个正在学习 AI 的学生。</p>
+            </div>
+          </div>
+
+          <div class="intro-block">
+            <p>
+              我最近在整理自己的作品，也在尝试用 AI 做一些更完整的小项目。
+              这里不是一份简历，更像一个让访客先简单了解我的入口。
+            </p>
+          </div>
+
+        </section>
+
+        <section class="section-panel" aria-labelledby="works-title">
+          <p class="eyebrow">Works</p>
+          <h2 id="works-title">作品展示</h2>
+
+          <div class="work-list">
+            <article class="work-item">
+              <span>Current</span>
+              <strong>个人主页 / 数字分身入口</strong>
+              <p>已经可以访问的主页版本。它把个人介绍、作品入口、联系方式和数字分身聊天放在一起，方便访客先快速了解我。</p>
+            </article>
+            <article class="work-item">
+              <span>In Progress</span>
+              <strong>AI 小项目尝试中</strong>
+              <p>我最近在尝试用 AI 做一些更完整的小项目。具体内容还在整理，能公开、讲清楚之后会继续补上。</p>
+            </article>
+            <article class="work-item">
+              <span>Long-term</span>
+              <strong>内容表达和知识整理</strong>
+              <p>我比较关注 AI 应用、内容表达和知识整理。这里会放长期整理出来的东西，没整理清楚的内容不会先包装成作品。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-panel contact-panel" aria-labelledby="contact-title">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">联系方式</h2>
+          <p>如果你想聊聊 AI、健身、APEX，或者只是打个招呼，可以先从 QQ 联系我。</p>
+          <a class="contact-link" href="tencent://message/?uin=2579592162">QQ 2579592162</a>
+        </section>
+      </div>
+
+      <section class="chat-panel" aria-labelledby="chat-title">
+        <div class="chat-heading">
+          <div>
+            <p class="eyebrow">Digital Twin</p>
+            <h2 id="chat-title">先和我的数字分身聊聊</h2>
+          </div>
+          <span class="status-dot" aria-label="在线"></span>
+        </div>
+
+        <div class="quick-questions" aria-label="点击后会发送的问题">
+          <button class="primary-question" type="button" data-question="最近在忙什么？">
+            最近在忙什么？
+          </button>
+          <button type="button" data-question="你有哪些作品？">有哪些作品？</button>
+          <button type="button" data-question="怎么联系你？">怎么联系你？</button>
+        </div>
+
+        <div class="chat-window" id="chatWindow" aria-live="polite">
+          <div class="message bot">
+            <p>你好，我是白暮的数字分身。可以随便问点轻松的：近况、作品、AI、健身、APEX，或者怎么联系他。</p>
+          </div>
+        </div>
+
+        <form class="chat-form" id="chatForm">
+          <label class="sr-only" for="chatInput">输入你的问题</label>
+          <input
+            id="chatInput"
+            type="text"
+            placeholder="随便问点什么，比如：最近在忙什么？"
+            autocomplete="off"
+          />
+          <button type="submit">发送</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
